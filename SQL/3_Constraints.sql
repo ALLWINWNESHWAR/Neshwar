@@ -37,24 +37,36 @@ into customer values(2209,'begam',2345678910, 20,30),
 into customer values(2210,'barani',2345678901, 18,30),
 commit;
 
---select statement 
+-- select statement 
 select * from city;
 select * from customer;
 
 -- column alias
 select cus_id,cus_name as Name from customer;
 
---column concatination
+-- column concatination
 select cus_id || ' ' || cus_name as Name, mobile from customer;
 
---column calculation
+-- column calculation
 select cus_name, age, age+10 as after_10_years from customer;
 
---unique
+-- unique
 select distinct age from customer;
 
---count
+-- count
 select count(distinct age from customer;
 
 -- where clause
-select cus_name , age from 
+select cus_name , age from customer where age> 18;
+select cus_name , age from customer where age between 18 and 23;
+
+-- is , is not
+select * from customer where age is null;
+select * from customer where age is not null;
+
+-- pattern matching
+select * from customer where name like 'a%';
+
+-- order by
+select * from customer order by age;
+select * from customer order by age desc;
