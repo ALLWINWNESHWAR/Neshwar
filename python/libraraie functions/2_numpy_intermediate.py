@@ -65,3 +65,23 @@ print(arr.flatten())
 print("\n Ravel: ")
 print(arr.ravel())
 
+#Lesson 8 — NumPy Mathematical & Statistical Functions
+#sum(), mean(), min(), max(), median(), std()
+
+mark = np.array([70, 85, 90, 65, 95, 80])
+
+print("sum: ", np.sum(mark))
+print("Mean: ",np.mean(mark))
+print("Min: ",np.min(mark))
+print("Max: ",np.max(mark))
+print("Median: ",np.median(mark))
+print("Standard deviation: ",np.std(mark))
+
+marks=np.array([[80,90,70],
+                [60,85,75],
+                [90,95,85]])
+
+print("add all:", np.sum(marks))
+print("add column vise: ", np.sum(marks, axis=0))
+print("add row vise: ", np.sum(marks, axis =1))
+
