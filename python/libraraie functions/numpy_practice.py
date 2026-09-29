@@ -113,3 +113,23 @@ print("Student 2, SQL mark:", std[1,1])
 print("Student 3, Python mark:", std[2,0])
 print("Student 3, ML mark:", std[2,2])
 
+
+print("\n")
+#Lesson 4 — 2D Array Slicing
+print("fro 1st row to 2rd and 1st colunm to 3rd column", std[0:2, 0:3])
+print("from second row from second colunm:", std[1:3, 1:3])
+print("all row first column:",std[:, 0])
+print("allrow second column:", std[:, 1])
+
+
+#Lesson 5 — Creating Special NumPy Arrays
+'''
+np.zeros()
+np.ones()
+np.arange()
+np.linspace()
+'''
+print(np.zeros(5))              #create array of containg 5 zeros
+print(np.ones(5))               #create array of containing 5 one
+print(np.arange(1, 11))         #create array of 1 to 10
+
