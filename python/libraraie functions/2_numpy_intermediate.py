@@ -85,3 +85,27 @@ print("add all:", np.sum(marks))
 print("add column vise: ", np.sum(marks, axis=0))
 print("add row vise: ", np.sum(marks, axis =1))
 
+
+#Lesson 9: axis with mean(), min(), and max()
+'''
+axis=0 → column-wise
+axis=1 → row-wise
+'''
+marks = np.array([
+    [80, 90, 70],
+    [60, 85, 75],
+    [90, 95, 85]
+])
+
+#1. Mean with axis
+print("mean:", np.mean(marks))
+print("mean column-wise:", np.mean(marks, axis=0))
+print("mean row-wise:", np.mean(marks, axis=1))
+#2. Minimum with axis
+print("min:", np.min(marks))
+print("min column-wise:", np.min(marks, axis=0))
+print("min row-wise:", np.min(marks, axis=1))
+#3. Maximum with axis
+print("max:", np.max(marks))
+print("max column-wise:", np.max(marks, axis=0))
+print("max row-wise:", np.max(marks, axis=1))
