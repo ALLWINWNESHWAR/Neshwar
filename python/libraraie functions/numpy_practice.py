@@ -65,7 +65,40 @@ arr.dtype       dtype → What type of data?
        
 '''
 
+#First NumPy Practice
 import numpy as np
-num=np.array([10,20,30,40,50])
-print(num)
-print(type(num))
+
+mark=np.array([85,90,76,88,95])
+
+print(mark)
+print("dimention:", mark.ndim)
+print("shape:", mark.shape)
+print("size:", mark.size)
+print("data type:", mark.dtype)
+print("adding 5 marks:", mark+5)
+print("subtraction 5 marks:", mark-5)
+print("multiplying 2 marks:", mark*2)
+print("dividing 2 marks:", mark/2)
+
+print("\n")
+#Lesson 2: NumPy Indexing  (learn how to access individual values.)
+print("first mark:",mark[0])
+print("last mark:",mark[-1])
+#slicing
+print(mark[1:3])
+print(mark[:3])
+print(mark[2:])
+print(mark[::2])
+print(mark[2::])
+print(mark[1:4:2])
+print(mark[::-1])
+
+print("\n")
+#Lesson 3: 2D NumPy Arrays
+std = np.array([
+    [85, 90, 76],
+    [88, 95, 82],
+    [70, 75, 80]
+])
+
+print(std)
