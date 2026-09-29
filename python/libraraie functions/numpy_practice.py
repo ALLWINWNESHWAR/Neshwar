@@ -133,3 +133,7 @@ print(np.zeros(5))              #create array of containg 5 zeros
 print(np.ones(5))               #create array of containing 5 one
 print(np.arange(1, 11))         #create array of 1 to 10
 
+print(np.arange(0, 20, 5))
+print(np.arange(2, 10, 2))
+print(np.arange(10, 0, -2))
+print(np.arange(5))
