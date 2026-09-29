@@ -95,10 +95,21 @@ print(mark[::-1])
 
 print("\n")
 #Lesson 3: 2D NumPy Arrays
+    #array[row, column]
 std = np.array([
     [85, 90, 76],
     [88, 95, 82],
     [70, 75, 80]
 ])
 
-print(std)
+print("2d matrix:", std)
+print("first row:", std[ 0])
+print("first row second element:", std[0,1])
+
+    #2D Indexing
+print("Student 2:", std[1])
+print("Student 3:", std[2])
+print("Student 2, SQL mark:", std[1,1])
+print("Student 3, Python mark:", std[2,0])
+print("Student 3, ML mark:", std[2,2])
+
