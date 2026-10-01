@@ -109,3 +109,76 @@ print("min row-wise:", np.min(marks, axis=1))
 print("max:", np.max(marks))
 print("max column-wise:", np.max(marks, axis=0))
 print("max row-wise:", np.max(marks, axis=1))
+
+
+#Lesson 10: Random Numbers
+'''
+NumPy provides the np.random module for generating random data.
+'''
+
+#1. np.random.randint()
+#   syntax : np.random.randint(start, stop)
+num = np.random.randint(1, 10)
+print(num)
+
+#2. Generate multiple random numbers
+#   syntax : np.random.randint(start, stop, size)
+num=np.random.randint(1,10,5)
+print(num)
+
+#3. Generate a 2D array
+num = np.random.randint(1, 100, size=(3, 4))            # <-- 3rows 4 column
+print(num)
+
+#4
+a=np.random.randint(1,50)
+print(a)
+
+#5
+b=np.random.randint(1,50,5)
+print(b)
+
+#6
+c=np.random.randint(1,50, size=(3,3))
+print(c)
+
+#6
+d=np.random.randint(1,20,5)
+print(d)
+
+#np.random.rand()                   <-- it will generate random foloaing numbers between 0 to 1
+print(np.random.rand())
+print(np.random.rand(5))
+print(np.random.rand(3, 4))
+
+#if you want to print more than 1.. then multuply by 10
+print(np.random.rand() * 10)
+
+#1. Generate multiple values
+print(np.random.rand(5) * 100)
+
+#np.random.uniform()
+#1
+print(np.random.uniform(10, 50))
+
+#2
+print(np.random.rand(5))
+
+#3
+print(np.random.rand(2, 4))
+
+#4
+print(np.random.uniform(20, 30, 5))
+
+
+'''
+1. Random integer:                              np.random.randint(10, 50)
+2. Random decimal:                              np.random.uniform(10, 50)
+3. Random decimal between 0 and 1:              np.random.rand()   
+'''
+
+'''
+randint   → random INTEGER
+rand      → random FLOAT 0–1
+uniform   → random FLOAT in YOUR range
+'''
