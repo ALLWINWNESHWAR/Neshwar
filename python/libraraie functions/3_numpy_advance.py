@@ -133,6 +133,75 @@ print(np.split(arr,2,axis=1))
 
 
 
+#Lesson 18 — Practical NumPy Data Science Exercises.
+#Exercise 1 — Student Marks Analysis
+
+marks = np.array([78, 92, 65, 88, 55, 95, 72, 81, 60, 90])
+
+#Q1. Find the average mark.
+print("average mark: ", np.mean(marks))
+#Q2. Find the highest mark.
+print("higest mark: ", np.max(marks))
+#Q3. Find the lowest mark.
+print("Lowest mark:", np.min(marks))
+#Q4. Find how many students scored 80 or above.
+print("std above 80:", marks[(np.where(marks >=80))])
+print("std above 80:", len(marks[(np.where(marks >=80))]))
+#Q5. Create a result array where:
+    #60 or above → "Pass"
+    #Below 60 → "Fail"
+print("result array:", np.where(marks>=60, "Pass", "Fail"))
+
+
+#Exercise 2 — Employee Salary Analysis
+salary = np.array([
+    25000, 32000, 45000, 28000, 52000,
+    38000, 60000, 41000, 30000, 55000
+])
+
+#Q1. Average salary
+print("average salary: ",np.mean(salary))
+#Q2. Highest salary
+print("high salary: ", np.max(salary))
+#Q3. Lowest salary
+print("low salary: ", np.min(salary))
+#Q4. How many employees earn more than 40,000?
+print("employees earn more than 40,000: ", len(salary[salary>40000]))
+#Q5. Extract all salaries between 30,000 and 50,000.
+print("slary between 30k to 50k:", salary[(salary > 30000) & (salary < 50000)])             #array[(condition1) & (condition2)]
+
+
+
+#Exercise 3 — Sales Data Analysis
+sales = np.array([
+    12000, 18000, 15000, 22000, 30000,
+    17000, 25000, 28000, 14000, 20000
+])
+
+#Q1. Find the total sales.
+print("total sale:", np.sum(sales))
+#Q2. Find the average sales.
+print("average salae:", np.mean(sales))
+#Q3. Find the highest sales.
+print("high sale:", np.max(sales))
+#Q4. Find the lowest sales.
+print("low sale:", np.min(sales))
+#Q5. How many sales transactions are above ₹20,000?
+print("above 20k:", len(sales[sales>20000]))
+#Q6. Extract all sales between ₹15,000 and ₹25,000,
+print("between 15k to 25k:", sales[(sales > 15000) & (sales < 25000)])
+#Q7. Create a category array:
+    #Sales >= 20,000 → "High"
+    #Sales < 20,000 → "Low"
+print("array: ", np.where(sales >= 20000, "High", "Low"))
+
+
+
+
+
+
+
+
 
 
 
