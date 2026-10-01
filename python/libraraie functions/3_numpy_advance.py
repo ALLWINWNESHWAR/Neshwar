@@ -73,3 +73,88 @@ print(re)
 #3 vertical stacking
 re=np.vstack((a,b))
 print(re)
+
+
+#Lesson 16 — Joining 2D Arrays with axis
+
+a = np.array([
+    [1, 2],
+    [3, 4]
+])
+
+b = np.array([
+    [5, 6],
+    [7, 8]
+])
+
+print(np.concatenate((a,b), axis = 0))              # add row
+print(np.concatenate((a,b), axis = 1))              # add column
+print(np.vstack((a, b)))                            # same as axis = 0
+
+
+
+#Lesson 17 — Splitting Arrays
+#split()
+arr = np.array([10,20,30,40,50,60,70,80])
+
+re = np.split(arr,4)
+print(re)
+
+#There are 5 elements, but 5 cannot be divided equally into 2 parts. so we go to        
+#array_split()
+
+arr = np.array([10,20,30,40,50])
+
+result = np.array_split(arr, 2)
+print(result)
+
+
+#2D spliting
+arr = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [7, 8]
+])
+
+result = np.split(arr, 2)
+print(result)
+
+#by axis spliting
+arr = np.array([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8]
+])
+
+print(np.split(arr,2,axis=0))
+print(np.split(arr,2,axis=1))
+
+
+
+
+
+
+
+
+
+"""
+
+Introduction, arrays & properties	                    ✅ Completed
+2	Indexing & 1D slicing	                            ✅ Completed
+3	2D arrays & indexing	                            ✅ Completed
+4	2D slicing	                                        ✅ Completed
+5	zeros(), ones(), arange()	                        ✅ Completed
+6	reshape()	                                        ✅ Completed
+7	flatten(), ravel()	                                ✅ Completed
+8	Mathematical & statistical functions	            ✅ Completed
+9	min(), max(), sum(), mean(), median(), std()	    ✅ Completed
+10	Random numbers — random	                            ✅ Completed
+11	Sorting & searching	                                ✅ Completed
+12	Conditional selection / Boolean indexing	        ✅ Completed
+13	Array joining & splitting	                        ✅ Completed
+14	Broadcasting	                                    🔄 
+15	Copy vs View	                                    ⏳
+16	Practical Data Science exercises	                ⏳
+17	NumPy mini project	                                ⏳
+
+"""
