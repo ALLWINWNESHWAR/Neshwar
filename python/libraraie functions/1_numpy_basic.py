@@ -30,7 +30,7 @@ arr.dtype       dtype → What type of data?
 4. Creating a NumPy Array           
         1D array
             import numpy as np
-            arr-np.array([10,20,30,400,50])
+            ar=np.array([10,20,30,400,50])
 5. 2D array
             import numpy as np
             arr = np.array([[10,20,30],
