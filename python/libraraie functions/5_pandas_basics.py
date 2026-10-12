@@ -57,6 +57,14 @@ importing pandas
     Rahul    78
     Kavi     90
     Vijay    88
+
+
+    
+NOTE:
+mean() → Average of all values.
+median() → Middle value after sorting.
+mode() → Most frequently occurring value.
+
 '''
 import pandas as pd
 
@@ -73,3 +81,37 @@ print("max: ",mark.max())
 print("count: ",mark.count())
 
 #q1
+marks = pd.Series([85,92,78,90,88], index=["allwin","gopi","bal","sucha","mad"])
+print("sucha marks : ", marks["sucha"])
+print("value in pos 1: ", marks.iloc[1])
+print("total: ",marks.sum())
+print("avg: ", marks.mean())
+print("mid: ", marks.median())
+
+
+#filrering 
+print("filtering")
+print(marks[marks > 88])
+print(marks[marks <=85])
+print(marks[marks > 80])
+print("between:\n", marks[(marks >=85) & (marks <=92)])
+
+#Lesson 1 — Final Concept: Handling Missing Values
+'''
+               Function    	          Purpose
+            ---------------    ----------------------------
+                isna()	        Identifies missing values
+                notna()	        Identifies non-missing values
+                fillna()	    Fills missing values
+                dropna()	    Removes missing values
+
+'''
+
+
+print("\n")
+marks = pd.Series([85, 92, None, 90, 88])
+print(marks.isna())                             #if it is NULL return true
+print(marks.notna())                            #if it is Not NULL returns true
+print(marks.isna().sum())                       #sum no.of null value
+print(marks.mean())
+
