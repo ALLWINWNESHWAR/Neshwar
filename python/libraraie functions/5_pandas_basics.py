@@ -115,3 +115,7 @@ print(marks.notna())                            #if it is Not NULL returns true
 print(marks.isna().sum())                       #sum no.of null value
 print(marks.mean())
 
+
+
+
+#Pandas Lesson 2 — DataFrame
