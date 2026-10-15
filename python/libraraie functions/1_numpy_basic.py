@@ -116,12 +116,12 @@ print("Student 3, ML mark:", std[2,2])
 
 print("\n")
 #Lesson 4 — 2D Array Slicing
-print("fro 1st row to 2rd and 1st colunm to 3rd column", std[0:2, 0:3])
+print("from 1st row to 2rd and 1st colunm to 3rd column", std[0:2, 0:3])
 print("from second row from second colunm:", std[1:3, 1:3])
 print("all row first column:",std[:, 0])
 print("allrow second column:", std[:, 1])
 
-
+print("\n")
 #Lesson 5 — Creating Special NumPy Arrays
 '''
 np.zeros()
