@@ -27,7 +27,7 @@ print(num[np.argmax(num)])              #using argmax()
 
 
 
-
+print("\n")
 #Lesson 14 — np.where()
 
 marks=np.array([85,60,95,72,88])
@@ -74,7 +74,8 @@ print(re)
 re=np.vstack((a,b))
 print(re)
 
-
+print("\n")
+print("joining 2D array")
 #Lesson 16 — Joining 2D Arrays with axis
 
 a = np.array([
@@ -92,7 +93,8 @@ print(np.concatenate((a,b), axis = 1))              # add column
 print(np.vstack((a, b)))                            # same as axis = 0
 
 
-
+print("\n")
+print("splitting")
 #Lesson 17 — Splitting Arrays
 #split()
 arr = np.array([10,20,30,40,50,60,70,80])
@@ -109,6 +111,7 @@ result = np.array_split(arr, 2)
 print(result)
 
 
+print("\n#2D spliting")
 #2D spliting
 arr = np.array([
     [1, 2],
@@ -197,7 +200,9 @@ print("array: ", np.where(sales >= 20000, "High", "Low"))
 
 
 
-
+print("\n identical matrix")
+#eye
+print(np.eye(3))
 
 
 
