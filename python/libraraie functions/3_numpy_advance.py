@@ -205,8 +205,32 @@ print("\n identical matrix")
 print(np.eye(3))
 
 
+print("\n file Handling ")
+#file Handling
+sam=np.array([1,2,3,4,5,6])
+np.save("data.npy", sam)
+
+read = np.load("data.npy")
+print(read)
 
 
+print("\nLinear Algebra")
+#Linear Algebra
+a=np.array([[1,2],
+            [3,4]])
+
+b=np.array([[5,6],
+            [4,3]])
+
+print("matrix multiplication")
+print(np.matmul(a,b))
+
+print("matrix Dot Product")
+print(np.dot(a,b))
+
+print("matrix Transpose")
+print(np.transpose(a))
+print(a.T)
 
 
 
