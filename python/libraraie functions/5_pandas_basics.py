@@ -180,3 +180,65 @@ print(df.index)
 print("\nData types")
 print(df.dtypes)
 
+
+#Task 1
+print("\nTask 1")
+
+data = {
+    "Name": ["Allwin", "Gopi", "Bal", "Sucha"],
+    "Age": [22, 23, 22, 21],
+    "Marks": [85, 92, 78, 90]
+}
+
+df = pd.DataFrame(data)
+
+print("Print only the Name column.")                            #Print only the Name column.
+print(df["Name"])
+
+print("\nPrint the average of the Marks column.")               #Print the average of the Marks column.
+print("avg marks = ", df["Marks"].mean())
+
+print("\nPrint the number of rows and columns.")                #Print the number of rows and columns.
+print("no.of rows: ", df.shape[0])
+print("no.of column: ", df.shape[1])
+
+
+#Task 2
+print("\nTask 2")
+print(df["Name"])                                               #return series
+print(df[["Name"]])                                             #return dataframe
+print(df[["Name", "Age"]])                                      #return dataframe with multiple column
+
+
+print("total mark: ", df["Marks"].sum())
+print(df.shape[0] == df.shape[1])
+print(df[["Age", "Marks"]]) 
+
+
+#Task 3
+print("task 3")
+
+
+data = {
+    "Name": ["Allwin", "Gopi", "Bal", "Sucha", "Mad"],
+    "Age": [22, 23, 22, 21, 24],
+    "Marks": [85, 92, 78, 90, 88],
+    "City": ["Karur", "Chennai", "Erode", "Karur", "Salem"]
+}
+
+df = pd.DataFrame(data)
+
+#Q1. Display only the Name and City columns.
+print("name & city\n", df[["Name","City"]])
+#Q2. Find the average age.
+print(df["Age"].mean())
+#Q3. Find the highest mark.
+print(df["Marks"].max())
+#Q4. Display the number of rows and columns using df.shape.
+row, column = df.shape
+print("no.of rows:", row)
+print("no.of column:", column)
+#Q5. Display the data types of all columns using df.dtypes.
+print(df.dtypes)
+#Q6. Display the first three rows using df.head(3).
+print(df.head(3))
