@@ -71,7 +71,7 @@ import pandas as pd
 mark = pd.Series([10,20,30,40,50,60], index=["allwin","balaji","gopal","madhan","sucha","madesh"])
 print(mark)
 print(mark["allwin"])                       #by key value
-print(mark.iloc[0])                         #by position
+print(mark.iloc[1])                         #by position
 print(mark + 5)                             #basic calculation
 print("sum: ",mark.sum())
 print("mean: ",mark.mean())
@@ -90,7 +90,7 @@ print("mid: ", marks.median())
 
 
 #filrering 
-print("filtering")
+print("\nfiltering")
 print(marks[marks > 88])
 print(marks[marks <=85])
 print(marks[marks > 80])
@@ -108,7 +108,7 @@ print("between:\n", marks[(marks >=85) & (marks <=92)])
 '''
 
 
-print("\n")
+print("\nhandling null value")
 marks = pd.Series([85, 92, None, 90, 88])
 print(marks.isna())                             #if it is NULL return true
 print(marks.notna())                            #if it is Not NULL returns true
@@ -117,5 +117,66 @@ print(marks.mean())
 
 
 
-
+print("\nLesson 2 DataFrame")
 #Pandas Lesson 2 — DataFrame
+#  A data frame is a 2D, tabulated data structure constists of rows and column
+# creating data frame]
+
+data = {"name" : ["alwin","gopi","bal","sucha","mad"],
+        "age" : [23,22,21,22,23],
+        "marks" : [99,90,95,97,98]}
+
+print("dictionary format: ",data)
+
+df = pd.DataFrame(data)
+
+print(df)
+
+# creating dataframe using list
+
+data2 = [["allwin", 22, 99],
+         ["balaji", 21, 98],
+         ["gopal",  23, 90]]
+
+print(data2)
+
+df = pd.DataFrame(data2, index=["std1","std2","std3"], columns=["name","age","marks"])
+
+print(df)
+
+
+print("\n")
+#4. Accessing DataFrame Columns
+
+data = {"name": ["allwin", "balahi","madhan","gopal","sucha"],
+        "age" : [22,23,12,25,22],
+        "marks" : [99,90,98,97,96]}
+
+print(pd.DataFrame(data))
+print(pd.DataFrame(data["name"]))
+print("\n")
+df = pd.DataFrame(data)
+print(df)
+print(df["name"])
+print("marks\n",df["marks"])
+#mean
+print("mean mark: ", df["marks"].mean())
+#shape
+print("shape : ", df.shape)                                     #shape = 5 x 3
+#print no.of rows 
+print("Rows: ", df.shape[0])
+#print no.of column 
+print("column: ", df.shape[1])
+
+#6. Understanding columns, index, and dtypes
+#A. Column names
+print(df.columns)
+print(df.columns.tolist())
+
+#B. Row indexes
+print(df.index)
+
+#C. Data types
+print("\nData types")
+print(df.dtypes)
+
