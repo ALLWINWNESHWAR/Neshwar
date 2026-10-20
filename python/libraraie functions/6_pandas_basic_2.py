@@ -22,3 +22,64 @@
 
 """
 
+import pandas as pd
+
+import os
+
+print(os.getcwd())
+
+#usinf r string (r) --> (backward slash)
+df = pd.read_csv(
+    r"D:\1 Credo Training\python\csv files\students.csv"
+)
+print(df)
+
+#normal method (forward slash / )
+df = pd.read_csv(
+    "D:/1 Credo Training/python/csv files/students.csv"
+)
+print(df)
+
+#print only specific columns
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv",
+                 usecols = ["Name", "Marks"] )
+
+print(df)
+
+'''
+#reading without header
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv", header = None)
+print(df)
+
+#providing own column name
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv", header=None, names= ["name", "age", "marks", "city"])
+print(df)
+'''
+
+
+
+# Task 1
+print(df["Marks"].mean())
+
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
+print(df.shape)
+
+#Q3 — Find Unique Cities
+print(df["City"].unique())
+
+#Q4 — Select Specific Columns
+print(df[["Name","Age"]])
+
+#Q5 — Display the First Three Rows
+print(df.head(3))
+
+#Display the total number of students.
+print("Total stds = ", df["Name"].count())
+#Calculate the highest mark.
+print("max marks = ", df["Marks"].max())
+#Calculate the average mark.
+print("avg marks = ", df["Marks"].mean())
+#Display students whose marks are greater than 85.
+print("marks > 85 : \n", df[df["Marks"] > 85 ])
+#Display only the Name and Marks columns for those students.
+print(df[df["Marks"] > 85][["Name","Marks"]])
