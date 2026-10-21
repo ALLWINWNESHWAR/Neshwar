@@ -5,7 +5,7 @@
 4	Inspecting data (head, tail, info, describe)	✅ Completed
 5	Selecting columns	                            ✅ Completed
 6	Selecting rows (loc and iloc)	                ✅ Completed
-7	Filtering data	                                ⏳ Pending
+7	Filtering data	                                ✅ Completed
 8	Adding and updating columns	                    ⏳ Pending
 9	Deleting columns and rows	                    ⏳ Pending
 10	Sorting data	                                ⏳ Pending
@@ -188,3 +188,42 @@ print(df[df["City"] != "Karur"])
 print(df[(df["Age"] < 24) & (df["Marks"] > 80)])
 print(df[(df["City"] == "Karur") | (df["Marks"] > 90)])
 
+
+#Lesson 8 — Adding and Updating Columns
+print("\nLesson 8   -—> Adding and Updating Columns")
+
+#add new column
+df["Result"] = ["Pass","Pass","Pass","Fail","Fail"]
+print(df)
+
+#update existing colum
+df["Marks"] = df["Marks"] + 5
+print(df)
+
+#calculated column
+df["Bonus"] = df["Marks"] + 3
+print(df)
+
+#Task 1
+print("\nTask 1")
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
+print(df)
+
+df["Result"] = ["Pass","Pass","Pass","Pass","Pass"]
+print(df)
+
+df["Bonus"] = df["Marks"] + 5
+print(df)
+
+df["Age"] = df["Age"] + 1
+print(df)
+
+df['Eligible'] = df['Marks'] >= 85
+print(df)
+
+print("\nloc method")
+df.loc[df['Name'] == 'Allwin', 'City'] = "Chennai"
+print(df)
+
+print("\nparticular column")
+print(df[["Name","Marks","Bonus","Eligible"]])
