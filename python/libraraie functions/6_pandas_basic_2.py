@@ -171,3 +171,20 @@ print(df.iloc[1,0])
 
 print(df.loc[0:2, ["Name","Marks"]])
 
+
+#Lesson 7 — Filtering Data in Pandas
+print("\nLesson 7 --> Filtering")
+print(df[df["Age"] > 21])
+print(df[(df["Age"] > 21) & (df["Marks"] > 80)])
+
+#Task 1
+print("\nFiltering Task 1")
+
+print(df[df["Marks"] > 85])
+print(df[df["Age"] < 23])
+print(df[df["Marks"] >= 90])
+print(df[df["City"] == "Karur"])
+print(df[df["City"] != "Karur"])
+print(df[(df["Age"] < 24) & (df["Marks"] > 80)])
+print(df[(df["City"] == "Karur") | (df["Marks"] > 90)])
+
