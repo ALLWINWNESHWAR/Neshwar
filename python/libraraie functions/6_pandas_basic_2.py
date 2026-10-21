@@ -3,8 +3,8 @@
 2	DataFrame basics	                            ✅ Completed
 3	Reading CSV files	                            ✅ Completed
 4	Inspecting data (head, tail, info, describe)	✅ Completed
-5	Selecting columns	                            ⏳ Pending
-6	Selecting rows (loc and iloc)	                ⏳ Pending
+5	Selecting columns	                            ✅ Completed
+6	Selecting rows (loc and iloc)	                ✅ Completed
 7	Filtering data	                                ⏳ Pending
 8	Adding and updating columns	                    ⏳ Pending
 9	Deleting columns and rows	                    ⏳ Pending
@@ -143,3 +143,31 @@ print(df["Marks"])
 print(df[["Name", "City"]])
 print(df[["Age", "Marks", "City"]])
 print(df[["Name"]])
+
+
+#Lesson 6 — Selecting Rows Using loc[] and iloc[]
+print("\nLesson 6 — loc[] and iloc[]")
+print(df.iloc[0])
+print(df.iloc[2])
+print("\nmultiple rows")
+print(df.iloc[0:3])
+
+print("\nloc")
+print(df.loc[0:2])
+
+#specific row and coumn
+print(df.iloc[0,0])
+print(df.loc[0:2, ["Name", "Marks"]])
+
+#Task 1
+print(df.iloc[0])
+print(df.iloc[2])
+print(df.iloc[0:4])
+
+print(df.loc[3])
+print(df.loc[1:3])
+
+print(df.iloc[1,0])
+
+print(df.loc[0:2, ["Name","Marks"]])
+
