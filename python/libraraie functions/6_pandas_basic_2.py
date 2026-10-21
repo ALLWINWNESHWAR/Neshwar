@@ -6,7 +6,7 @@
 5	Selecting columns	                            ✅ Completed
 6	Selecting rows (loc and iloc)	                ✅ Completed
 7	Filtering data	                                ✅ Completed
-8	Adding and updating columns	                    ⏳ Pending
+8	Adding and updating columns	                    ✅ Completed
 9	Deleting columns and rows	                    ⏳ Pending
 10	Sorting data	                                ⏳ Pending
 11	Missing values	                                ⏳ Pending
@@ -227,3 +227,39 @@ print(df)
 
 print("\nparticular column")
 print(df[["Name","Marks","Bonus","Eligible"]])
+
+
+#Lesson 9 — Deleting Columns and Rows in Pandas
+print("\nLesson 9   --> Deleting Columns and Rows")
+
+#delete particular column
+df = df.drop("City", axis=1)
+print(df)
+
+#alternate method
+print("\nalternate method")
+df.drop(columns=["Bonus"], inplace=True)
+print(df)
+
+#task 1
+print("\nTask 1")
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
+df = df.drop("City", axis=1)
+print(df)
+
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
+df.drop(columns=["Age","City"], inplace=True)
+print(df)
+
+df = df.drop(index = 2)
+print(df)
+
+df = df.drop(index = [1,3])
+print(df)
+
+df.drop(columns=["Marks"], inplace = True)
+print(df)
+
+df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
+df.drop(index=df[df["Name"] == "Bal"].index, inplace=True)
+print(df)
