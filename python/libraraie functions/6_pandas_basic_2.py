@@ -2,7 +2,7 @@
 1	Series	                                        ✅ Completed
 2	DataFrame basics	                            ✅ Completed
 3	Reading CSV files	                            ✅ Completed
-4	Inspecting data (head, tail, info, describe)	⏳ Pending
+4	Inspecting data (head, tail, info, describe)	✅ Completed
 5	Selecting columns	                            ⏳ Pending
 6	Selecting rows (loc and iloc)	                ⏳ Pending
 7	Filtering data	                                ⏳ Pending
@@ -127,3 +127,19 @@ print("columns:", df.shape[1])
 print(df.describe())
 print(df.columns.tolist())
 print(df.dtypes)
+
+
+#Lesson 5 — Selecting Columns in Pandas
+print("\nsingle column --> series")
+print(df["Age"])
+print(df["City"])
+
+print("\nmultiple columns --> dataframe")
+print(df[["Name", "Marks"]])
+print(df[["Name", "Age", "City"]])
+
+#Tak 1
+print(df["Marks"])
+print(df[["Name", "City"]])
+print(df[["Age", "Marks", "City"]])
+print(df[["Name"]])
