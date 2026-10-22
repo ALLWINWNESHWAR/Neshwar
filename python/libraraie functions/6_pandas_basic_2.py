@@ -7,7 +7,7 @@
 6	Selecting rows (loc and iloc)	                ✅ Completed
 7	Filtering data	                                ✅ Completed
 8	Adding and updating columns	                    ✅ Completed
-9	Deleting columns and rows	                    ⏳ Pending
+9	Deleting columns and rows	                    ✅ Completed
 10	Sorting data	                                ⏳ Pending
 11	Missing values	                                ⏳ Pending
 12	groupby()	                                    ⏳ Pending
@@ -263,3 +263,5 @@ print(df)
 df = pd.read_csv("D:/1 Credo Training/python/csv files/students.csv")
 df.drop(index=df[df["Name"] == "Bal"].index, inplace=True)
 print(df)
+
+
