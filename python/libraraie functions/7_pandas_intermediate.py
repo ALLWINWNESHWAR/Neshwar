@@ -12,7 +12,7 @@
 11	Missing values	                                ✅ Completed
 12	groupby()	                                    ✅ Completed
 13	Aggregation functions	                        ✅ Completed
-14	apply() and custom functions	                ⏳ Pending
+14	apply() and custom functions	                ✅ Completed
 15	String operations	                            ⏳ Pending
 16	Date and time operations	                    ⏳ Pending
 17	Merging and joining DataFrames	                ⏳ Pending
@@ -145,3 +145,74 @@ print(df.groupby("City").agg({"Marks":["mean"],"Age":["mean"]}))
 city_avg = df.groupby("City")["Marks"].mean()
 print(city_avg.idxmax(), city_avg.max())                                                    # <-- idxmax
 
+
+
+#Lesson 14 — apply()
+print("\nLesson 14 apply()")
+
+data = {
+    "Name": ["Allwin", "Gopi", "Bal", "Sucha", "Mad"],
+    "Marks": [85, 92, 78, 90, 88]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+#Use apply() on a column
+print("\nUse apply() on a column")
+
+def calculate_result(marks):
+    if marks >= 90:
+        return "Excellent"
+    elif marks >= 80:
+        return "Good"
+    else:
+        return "Needs Improvement"
+
+df["Result"] = df["Marks"].apply(calculate_result)
+
+print(df)
+
+
+#Apply a function to multiple columns
+print("\nApply a function to multiple columns")
+
+def evaluate_student(row):
+    if row["Marks"] >= 85 and row["Name"] == "Allwin":
+        return "Selected"
+    return "Not Selected"
+
+df["Status"] = df.apply(evaluate_student, axis=1)
+
+print(df)
+
+#Task 1
+print("\n Task 1")
+
+def pf(mark):
+    if mark >= 80:
+        return "pass"
+    else:
+        return "fail"
+    
+df["result"] = df["Marks"].apply(pf)
+print(df)
+
+df["bonus"] = df["Marks"] + 10
+print(df)
+
+df ["Age"] = [20,18,15,22,12]
+print(df)
+
+def che(Age):
+    if Age >= 18:
+        return "Adult"
+    else:
+        return "Minor"
+    
+df["category"] = df["Age"].apply(che)
+print(df)
+
+
+#Lesson 15 — String Operations in Pandas
