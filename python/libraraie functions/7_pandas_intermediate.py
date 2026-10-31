@@ -216,3 +216,29 @@ print(df)
 
 
 #Lesson 15 — String Operations in Pandas
+print("\nLesson 15 — String Operations in Pandas")
+
+data = {
+    "Name": [" allwin ", "GOPI", "bal", "Sucha ", " mad"],
+    "City": ["karur", "CHENNAI", "Erode", "KARUR", "salem"],
+    "Email": ["ALLWIN@GMAIL.COM","gopi@gmail.com","BAL@GMAIL.COM","sucha@gmail.com","MAD@GMAIL.COM"]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+#Convert text to uppercase
+df["Name"] = df["Name"].str.upper()                             # <-- str.upper()
+print(df)
+
+#Convert text to lowercase
+df["Email"] = df["Email"].str.lower()                           # <-- str.lower()
+print(df)
+
+#Remove extra spaces
+df["Name"] = df["Name"].str.strip()                             # <-- str.strip()
+print(df)
+
+#Replace text
+df["City"] = df["City"].str.replace("Karur","Bangalore", case=False)
+print(df)
