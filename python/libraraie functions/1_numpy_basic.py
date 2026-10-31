@@ -93,7 +93,7 @@ print(mark[2::])
 print(mark[1:4:2])
 print(mark[::-1])
 
-print("\n")
+print("\n2D array")
 #Lesson 3: 2D NumPy Arrays
     #array[row, column]
 std = np.array([
