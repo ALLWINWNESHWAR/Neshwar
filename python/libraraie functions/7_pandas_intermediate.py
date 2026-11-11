@@ -242,3 +242,61 @@ print(df)
 #Replace text
 df["City"] = df["City"].str.replace("Karur","Bangalore", case=False)
 print(df)
+
+
+print("\nTask")
+
+#Lesson 15 — String Operations in Pandas
+print("Lesson 15 — String Operations in Pandas")
+
+
+data = {
+    "Name": [" allwin ", "GOPI", "bal", "Sucha ", " mad"],
+    "City": ["karur", "CHENNAI", "Erode", "KARUR", "salem"],
+    "Email": [
+        "ALLWIN@GMAIL.COM",
+        "gopi@gmail.com",
+        "BAL@GMAIL.COM",
+        "sucha@gmail.com",
+        "MAD@GMAIL.COM"
+    ]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+print(df["Name"].str.upper())                   #it retuen only that one name column
+
+df["Name"] = df["Name"].str.upper()             #it return full data but name columnin upper case
+print(df)
+
+#lower()
+
+df["Email"] = df["Email"].str.lower()
+print(df)
+
+#remove space
+#str.strip()
+df["Name"] = df["Name"].str.strip()
+print(df)
+
+#replace
+df["City"] = df["City"].replace("karur", "Karappakam")
+print(df)
+
+#contains
+print()
+print(df[df["Email"].str.contains("gmail", case=False, na=False)])
+
+#split the word
+df["Email_name"] = df["Email"].str.split("@")
+print(df)
+
+df["Email_name"] = df["Email"].str.split("@").str[0]
+print(df)
+
+df["Email_address"] = df["Email"].str.split("@").str[1]
+print(df)
+
+print("\nTask")
