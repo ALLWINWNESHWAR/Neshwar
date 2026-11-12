@@ -300,3 +300,45 @@ df["Email_address"] = df["Email"].str.split("@").str[1]
 print(df)
 
 print("\nTask")
+
+data = {
+    "Name": [" allwin ", "GOPI", "bal", "Sucha ", " mad"],
+    "City": ["karur", "CHENNAI", "Erode", "KARUR", "salem"],
+    "Email": [
+        "ALLWIN@GMAIL.COM",
+        "gopi@gmail.com",
+        "BAL@GMAIL.COM",
+        "sucha@gmail.com",
+        "MAD@GMAIL.COM"
+    ]
+}
+
+df = pd.DataFrame(data)
+
+#Q1. Convert all names to uppercase.
+df["Name"] = df["Name"].str.upper()
+print(df)
+
+#Q2. Convert all email addresses to lowercase.
+df["Email"] = df["Email"].str.lower()
+print(df)
+
+#Q3. Remove extra spaces from the beginning and end of every name.
+df["Name"] = df["Name"].str.strip()
+print(df)
+
+#Q4. Convert all city names to title case—for example, "CHENNAI" to "Chennai".
+df["City"] = df["City"].str.title()
+print(df)
+
+#Q5. Filter students whose email contains "gmail".
+print(df[df["Email"].str.contains("gmail", case=False)])
+
+
+#Q6. Create a new column called Email_Domain containing the domain from each email address.
+df["Email_Domain"] = df["Email"].str.split("@").str[1]
+print(df)
+
+#Q7. Challenge: Create a new column called
+df["Name_Length"] = df["Name"].str.strip().str.len()
+print(df)
